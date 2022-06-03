@@ -1,0 +1,49 @@
+ body {
+ 	background: #F8DFBA;
+ }
+header {
+	background: #28D4FC;
+	padding:50px ;
+	text-align: center;
+	font: bold;
+
+}
+#Welcome {
+	background:#28D4FC ;
+	padding:5px ;
+	text-align: center;
+	 border-spacing: 1px;
+}
+#joinQ {
+
+	text-align: center;
+}
+.UsersType {
+	text-align: center;
+}
+
+#RegularUser {
+	background:#28D4FC ;
+}
+#AdmUser {
+	background: #28D4FC ;
+}
+.SectionOne {
+	text-align: center;
+}
+.SectionTwo {
+	text-align: center;
+}
+.SectionThree {
+	text-align: center;
+
+}
+.footer {
+	text-align: center;
+}
+.Box_Three {
+	background: blue;
+}
+#Box_textTwo {
+	background: yellowgreen;
+}
