@@ -1,0 +1,97 @@
+ body {
+ 	background: #F8DFBA;
+     font-family: sans-serif;
+ }
+ .footer{
+     clear: both;
+ }
+ .cuadro{
+    background:#28D4FC ;
+	padding:5px ;
+    border: solid 2px black;
+    border-radius: 10px;
+ }
+ #zonacentro{
+     width: 30%;
+     display: inline-block;
+     margin: 50px;
+ }
+#zonaderecha{
+    float: right;
+    width: 30%;
+    display: inline-block;
+}
+#zonaderecha nav{
+    width: 80%;
+    margin: 10%;
+    margin-top: 20%;
+    list-style: none;
+}
+.cuadroshome{
+    width: 80%;
+  }
+#zonaizquierda{
+    float: left;
+    width: 30%;
+    display: inline-block;
+}
+ .UsersType p{
+     width: auto;
+     text-align: center;
+ }
+#agrupwelcome{
+    text-align: center;
+}
+header {
+	background: #28D4FC;
+	padding:0px ;
+	font: bold;
+    border: solid 2px black;
+
+}
+#section2{
+    margin: 20% 10%;
+}
+.text{
+    text-align: justify;
+}
+.footer {
+	text-align: center;
+}
+#headerhomeAdm{
+    text-align: center;
+}
+.menu li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    border: solid black 1px;
+    margin: 0%;
+    font-weight: bold;
+    background-color: aqua;
+}
+.menu{
+    text-align: center;
+    margin: 0px;
+}
+.asidehome{
+    width: 100% 20%;
+    float: left;
+    background-color: gray;
+    border: black solid 2px;
+}
+.events{
+    text-align: center;
+}
+.homebigbox{
+    float: right;
+    text-align: center;
+    width: 77%;
+}
+.Box_Three{
+    width: 80%;
+    background-color: cornflowerblue;
+    border: 2px black solid;
+}
