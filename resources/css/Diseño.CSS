@@ -131,4 +131,13 @@ header {
   background-color: green; /*Solo para visualizar*/
   list-style-type: none;
 }
-
+#dt_interno{
+    background: #669999;
+    width: 100%;
+    border: solid black 1px;
+    margin-top: 5px;
+}
+#dt_interno td{
+    border: solid black 1px;
+    font-weight: bold;
+}
