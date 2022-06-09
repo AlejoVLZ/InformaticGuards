@@ -1,17 +1,28 @@
  body {
- 	background: #F8DFBA;
+ 	background: floralwhite;
      font-family: sans-serif;
  }
  .footer{
 
      margin-top: 450px;
  }
+ header {
+	background: #28D4FC;
+	padding:0px ;
+	font: bold;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+header h1{
+    padding-left: 50px;
+}
  .cuadro{
     background:#28D4FC ;
 	padding:5px ;
     border: solid 2px black;
     border-radius: 10px;
  }
+ /*a partir de aqui se crea la division de la pagina de welcome */
  #zonacentro{
      width: 30%;
      display: inline-block;
@@ -19,7 +30,7 @@
  }
 #zonaderecha{
     float: right;
-    width: 30%;
+    width: 25%;
     display: inline-block;
 }
 #zonaderecha nav{
@@ -28,6 +39,9 @@
     margin-top: 20%;
     list-style: none;
 }
+/*hasta aqui*/
+
+/*aqui se divide el contenido del home de usuario*/
 .cuadroshome{
     width: 80%;
   }
@@ -36,20 +50,14 @@
     width: 30%;
     display: inline-block;
 }
- .UsersType p{
+.UsersType p{
      width: auto;
      text-align: center;
  }
 #agrupwelcome{
     text-align: center;
 }
-header {
-	background: #28D4FC;
-	padding:0px ;
-	font: bold;
-    border: solid 2px black;
 
-}
 #section2{
     margin: 20% 10%;
 }
@@ -59,7 +67,7 @@ header {
 .footer {
 	text-align: center;
 }
-#headerhomeAdm{
+#headersection{
     text-align: center;
 }
 .menu li{
@@ -112,9 +120,7 @@ header {
     border: 2px black solid;
     font-weight: bold;
 }
-.Box_Three{
-
-}
+/*seccion del inoformacion de susuario*/
 .calendar{
   flex-wrap: wrap;
   justify-content: space-evenly;
