@@ -3,7 +3,7 @@
     font-family: sans-serif;
  }
  .footer{
-
+    text-align: center;
      margin-top: 450px;
  }
  header {
@@ -64,10 +64,7 @@ header h1{
 .text{
     text-align: justify;
 }
-.footer{
-    position: absolute;
-	text-align: center;
-}
+
 #headersection{
     text-align: center;
 }
@@ -93,6 +90,7 @@ header h1{
     float: left;
     background-color: gray;
     border: black solid 2px;
+    border-radius: 2rem;
 }
 .elementsidebar{ /*barra lateral del home*/
     font-weight: bold;
@@ -144,6 +142,16 @@ header h1{
     align-items: center;
     width: 100%;
 }
+.calendaradmin{
+    align-items: center;
+    width: 100%;
+}
+.calendaradmin td{
+    width: 30%;
+    border: solid black 1px;
+    flex: 1 0 100%;
+    list-style-type: none;
+}
 .calendar td{
     width: 50%;
     border: solid black 1px;
@@ -153,8 +161,14 @@ header h1{
 #fila1{
     background-color: none;
 }
-.filas{
+.asignado{
     background-color: rgb(27, 167, 27);
+}
+.ivan{
+ background-color: rgb(97, 9, 240);
+}
+.ale{
+ background-color:rgb(255, 178, 10);
 }
 #dt_interno{ /*informacion de usuario*/
     background: #669999;
