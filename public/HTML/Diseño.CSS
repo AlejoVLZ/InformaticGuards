@@ -71,7 +71,7 @@ header h1{
 #headersection{
     text-align: center;
 }
-.menu li{
+.menu li{ /*menu del header*/
     list-style: none;
     display: inline-block;
     padding: 7px;
@@ -94,7 +94,7 @@ header h1{
     background-color: gray;
     border: black solid 2px;
 }
-.elementsidebar{
+.elementsidebar{ /*barra lateral del home*/
     font-weight: bold;
     width: 90%;
     background-color: antiquewhite;
@@ -108,7 +108,21 @@ header h1{
 .elementsidebar h4{
     text-align: center;
 }
-
+#lg1{ /* estas son las etiquetas de leyenda*/
+    background-color: rgb(50, 156, 50);
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+#lg2{
+    background-color: rgb(177, 59, 59);
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+#lg3{
+    background-color: rgb(178, 204, 62);
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
 .homebigbox{ /*cja que engloba el contenido princiapl del home*/
     float: right;
     width: 75%;
@@ -134,10 +148,14 @@ header h1{
     width: 50%;
     border: solid black 1px;
     flex: 1 0 100%;
-    background-color: rgb(27, 167, 27); /*Solo para visualizar*/
     list-style-type: none;
 }
-
+#fila1{
+    background-color: none;
+}
+.filas{
+    background-color: rgb(27, 167, 27);
+}
 #dt_interno{ /*informacion de usuario*/
     background: #669999;
     width: 100%;
@@ -146,5 +164,7 @@ header h1{
 }
 #dt_interno td{
     border: solid black 1px;
-    font-weight: bold;
+    font-weight: 500;
+    background-color: aliceblue;
+
 }
