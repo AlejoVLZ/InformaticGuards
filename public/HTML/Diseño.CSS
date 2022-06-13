@@ -30,7 +30,7 @@ header h1{
  }
 #zonaderecha{
     float: right;
-    width: 25%;
+    width: 30%;
     display: inline-block;
 }
 #zonaderecha nav{
@@ -182,3 +182,22 @@ header h1{
     background-color: aliceblue;
 
 }
+/*registro*/
+.logginbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logginbox h3{
+    font-size: 2rem;
+}
+.logginbox label{
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+.logginbox input{
+    width: 20rem ;
+    margin-bottom: 0.8rem;
+}
+
+
