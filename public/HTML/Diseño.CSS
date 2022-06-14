@@ -3,8 +3,9 @@
     font-family: sans-serif;
  }
  .footer{
+     clear: both;
     text-align: center;
-     margin-top: 450px;
+    margin-top: 5rem
  }
  header {
 	background: #28D4FC;
@@ -71,7 +72,6 @@ header h1{
 .menu li{ /*menu del header*/
     list-style: none;
     display: inline-block;
-    padding: 7px;
     text-align: center;
     width: 30%;
     border: solid black 1px;
@@ -86,25 +86,31 @@ header h1{
 /*zona del home*/
 .asidehome{
     margin-top: 2rem;
-    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
     float: left;
     background-color: gray;
-    border: black solid 2px;
+    border: black solid 0.15rem;
     border-radius: 2rem;
 }
 .elementsidebar{ /*barra lateral del home*/
     font-weight: bold;
-    width: 90%;
+    max-width: 90%;
     background-color: antiquewhite;
-    margin: 2rem 1rem;
     border: solid black 1px ;
+    margin: 1rem 1rem;
+    border-radius: 0.5rem;
 }
 .elementsidebar p{
-    margin: 1rem 2rem;
     font-weight: lighter;
+    margin: 1rem;
 }
 .elementsidebar h4{
     text-align: center;
+}
+.elementsidebar input{
+    margin: 1rem 1rem;
+    max-width: 80%;
 }
 #lg1{ /* estas son las etiquetas de leyenda*/
     background-color: rgb(50, 156, 50);
@@ -123,7 +129,7 @@ header h1{
 }
 .homebigbox{ /*cja que engloba el contenido princiapl del home*/
     float: right;
-    width: 75%;
+    width: 73%;
 }
 .opcionesbusqueda p,select{ /*opciones de busqueda del calendario*/
     display: inline;
@@ -197,7 +203,11 @@ header h1{
 }
 .logginbox input{
     width: 20rem ;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    border-radius: 1rem;
 }
-
+.logginbox input::placeholder{
+    padding-left: 1rem;
+}
 
