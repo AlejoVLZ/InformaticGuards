@@ -19,11 +19,11 @@
     <div class="singupbox">
         <h3>BIEVENIDO</h3>
         <p >Pavor, llenar el siguiente formulario para completar su registro</p>
-
+        <form action="">
         <! –– username section ––>
 
             <label for="username_new">Nombre de usuario nuevo</label>
-            <input type="text" name="Enter new username" placeholder="Nombre">
+            <input type="text" name="name" placeholder="Nombre">
 
         <! ––  password section ––>
 
@@ -35,20 +35,17 @@
         <label for="Email">Ingresar correo electronico </label>
         <input type="text" name="Enter Email" placeholder="Correo">
 
-        <! ––  birthday section ––>
-
-        <label for="Birthday">Ingresar fecha de nacimiento  </label>
-        <input type="text" name="Enter BirthdayDate"
-        placeholder="(MM/DD/YYYY)">
-
         <label for="Document">Ingresar documento  </label>
-        <input type="text" name="" placeholder="Cedula/rif">
+        <input type="text" name="dni" placeholder="Cedula/rif">
 
         <label for="Phone">Ingresar Telefono  </label>
-        <input type="text" name="" placeholder="Tlf">
+        <input type="text" name="phone" placeholder="Tlf">
 
+        <label for="rol">Ingresar Rol  </label>
+        <input type="text" name="rol" placeholder="su ocupación">
 
-        <input type="submit" name="log in">
+        <input type="submit" name="Guardar">
+    </form>
         </div>
 
 

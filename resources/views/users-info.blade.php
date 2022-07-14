@@ -25,31 +25,26 @@
 						<td>Status</td>
 					</tr>
 					<tr>
-						<td>Ivan</td>
-						<td>iyanes.3565@unimar.edu.ve</td>
-						<td>28043565</td>
-						<td>0424 8144487</td>
-						<td>admin</td>
-						<td>Activo</td>
-					</tr>
-					<tr>
-						<td>Alejandro</td>
-						<td>avelasquez.5536@unimar.edu.ve</td>
-						<td>28315536</td>
-						<td>04123589671</td>
-						<td>admin</td>
-						<td>activo</td>
-					</tr>
-					<tr>
-						<td>Georgelyz</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Supervisora</td>
-						<td>suspended</td>
+						@foreach ( $usuariosos as $usuario )
+                        <tr>
+                            <td> {{ $usuario->id }}</td>
+                            <td> {{ $usuario->nombre }}</td>
+                            <td> {{ $usuario->correo }}</td>
+                            <td> {{ $usuario->cedula }}</td>
+                            <td> {{ $usuario->telefono }}</td>
+                            <td> {{ $usuario->rol }}</td>
+                            <td> {{ $usuario->estatus }}</td>
+                                <td>
+                                    <a href="/usuarios/ver"{{$usuario->id}}>ver</a>
+                                    <a href="/usuarios/editar"{{$usuario->id}}>editar</a>
+                                    <a href="/usuarios/eliminar"{{$usuario->id}}>eliminar</a>
+                                </td>
+                        </tr>
+                        @endforeach
 					</tr>
 				</table>
-
+                <br>
+                <a href="/usuarios/crear">nuevo usuario</a>
 			</div>
 
 @endsection

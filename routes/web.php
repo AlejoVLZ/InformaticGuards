@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +35,6 @@ Route::get('/usinfo', function () {
     return view('users-info');
 });
 
+Route::get('/usuarios', [UsuarioController::class,'index']);
+Route::get('/usuarios/crear', [UsuarioController::class,'create']);
+Route::post('/usuarios/crear', [UsuarioController::class,'store']);

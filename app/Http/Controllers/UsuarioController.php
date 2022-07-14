@@ -78,7 +78,10 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->fill($request->all());
+        $usuario->save();
+        return redirect()->action([UsuarioController::class,'index']);
     }
 
     /**
@@ -89,6 +92,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+        return redirect()->action([UsuarioController::class,'index']);
     }
 }
