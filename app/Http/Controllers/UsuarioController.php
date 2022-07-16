@@ -40,6 +40,13 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'name'=> 'required',
+            'password'=> 'required',
+            'email'=> ['required','email'],
+            'dni'=> 'required',
+            'rol'=> 'required'
+        ]);
         $usuario = new Usuario($request->all());
         $usuario->save();
         return redirect()->action([UsuarioController::class, 'index']);

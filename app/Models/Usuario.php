@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
-    protected $table = "alumnos";
+    protected $table = "a";
     protected $fillable = ["id","nombre","correo","cedula","telefono","rol","estatus","clave"] ;
+    public $timestamp = false;
 
-    public function obtenerUsuarios(){
+    function obtenerUsuarios(){
         return Usuario::all();
         }
         public function obtenerUsuarioporId($id)
@@ -18,7 +19,4 @@ class Usuario extends Model
         return Usuario::find($id);
         }
     use HasFactory;
-
 }
-
-
