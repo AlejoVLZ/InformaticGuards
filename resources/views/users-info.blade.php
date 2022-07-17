@@ -16,35 +16,33 @@
 			<! ––  Tabla de la informacion de usuario ––>
 			<div >
 				<table id="dt_interno">
-					<tr>
-						<td >Nombre</td>
+					<thead>
+                        <td>ID</td>
+						<td>Nombre</td>
 						<td>Correo</td>
 						<td>Cedula</td>
 						<td>Telefono</td>
 						<td>Rol</td>
 						<td>Status</td>
-					</tr>
-					<tr>
-						@foreach ( $usuariosos as $usuario )
+
+                    </thead>
+					<tbody>
+                        @foreach ( $usuarios as $usuario )
                         <tr>
                             <td> {{ $usuario->id }}</td>
-                            <td> {{ $usuario->nombre }}</td>
-                            <td> {{ $usuario->correo }}</td>
-                            <td> {{ $usuario->cedula }}</td>
-                            <td> {{ $usuario->telefono }}</td>
+                            <td> {{ $usuario->name }}</td>
+                            <td> {{ $usuario->email }}</td>
+                            <td> {{ $usuario->dni }}</td>
+                            <td> {{ $usuario->phone }}</td>
                             <td> {{ $usuario->rol }}</td>
-                            <td> {{ $usuario->estatus }}</td>
-                                <td>
-                                    <a href="/usuarios/ver"{{$usuario->id}}>ver</a>
-                                    <a href="/usuarios/editar"{{$usuario->id}}>editar</a>
-                                    <a href="/usuarios/eliminar"{{$usuario->id}}>eliminar</a>
-                                </td>
+                            <td> {{ $usuario->status }}</td>
+                            <td> <a href= "{{ route('usuarios.editar',$usuario->id) }}" >edit</a></td>
                         </tr>
                         @endforeach
-					</tr>
+                    </tbody>
+
+
 				</table>
-                <br>
-                <a href="/usuarios/crear">nuevo usuario</a>
 			</div>
 
 @endsection

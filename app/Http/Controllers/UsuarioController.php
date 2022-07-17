@@ -19,7 +19,10 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = $this->usuarios->obtenerUsuarios();
-        return view('usuario.vista', ['usuarios'=>$usuarios]);
+        $data = [
+            'usuarios'=>$usuarios,
+        ];
+        return view('users-info',$data);
     }
 
     /**
@@ -29,7 +32,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view('usuarios.crear');
+        return view('Registro');
     }
 
     /**
@@ -38,7 +41,8 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+   public function store(Request $request)
     {
         request()->validate([
             'name'=> 'required',
@@ -49,7 +53,7 @@ class UsuarioController extends Controller
         ]);
         $usuario = new Usuario($request->all());
         $usuario->save();
-        return redirect()->action([UsuarioController::class, 'index']);
+        return redirect()->route('welcome');
     }
 
     /**
@@ -73,7 +77,10 @@ class UsuarioController extends Controller
     public function edit($id)
     {
         $usuario = $this->usuarios->obtenerUsuarioporId($id);
-        return view('usuarios.editar',['usuario'=>$usuario]);
+        $data = [
+            'usuarios'=>$usuario,
+        ];
+        return view('User-edit',$data);
     }
 
     /**
@@ -88,7 +95,7 @@ class UsuarioController extends Controller
         $usuario = Usuario::find($id);
         $usuario->fill($request->all());
         $usuario->save();
-        return redirect()->action([UsuarioController::class,'index']);
+        return view('users-info');
     }
 
     /**

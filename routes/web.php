@@ -13,25 +13,26 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 
-Route::get('/', function () {return view('Welcomea');});
+Route::get('/', function () {return view('Welcome');})->name('welcome');
+
+Route::view('/sing', 'Registro') -> name('registro');
+
+Route::get('/usuarios.editar',[UsuarioController::class,'edit'])->name('usuarios.editar');
+
+Route::put('/usuarios.actualizar',[UsuarioController::class,'update'])->name('usuarios.actualizar');
+
+
 
 Route::get('/homea', function () {return view('Home_Adm');});
 
 Route::get('/homeus', function () {return view('home_user');});
 
-Route::view('/sing', 'Registro') -> name('registro');
-
-Route::post('registro', [UsuarioController::class, 'store']) ->name('registrar');
 
 
+Route::get('/loginus', function () {return view('login_regular');})->name('login.usuario');
 
+Route::get('/loginadm', function () {return view('login_Adm');})->name('login.admin');
 
-Route::get('/loginus', function () {return view('login_regular');});
+Route::get('usuarios.index', [UsuarioController::class,'index'])->name('usuarios.index');
 
-Route::get('/loginadm', function () {return view('login_Adm');});
-
-Route::get('/usinfo', function () {return view('users-info');});
-
-Route::get('/usuarios', [UsuarioController::class,'index']);
-
-Route::post('/usuarios/crear', [UsuarioController::class,'store']);
+Route::post('/usuarios', [UsuarioController::class,'store'])->name('usuarios.crear');

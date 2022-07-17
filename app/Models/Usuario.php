@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
-    protected $table = "a";
-    protected $fillable = ["id","nombre","correo","cedula","telefono","rol","estatus","clave"] ;
+    protected $table = "usuarios";
+    protected $fillable = ["id","name","email","dni","phone","rol","status","password"] ;
     public $timestamp = false;
 
     function obtenerUsuarios(){

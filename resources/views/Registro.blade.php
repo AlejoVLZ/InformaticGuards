@@ -21,7 +21,7 @@
     <div class="singupbox">
         <h3>BIEVENIDO</h3>
         <p >Pavor, llenar el siguiente formulario para completar su registro</p>
-        <form action="{{ route('registrar')}}" method="POST">
+        <form action="{{ route('usuarios.crear')}}" method="POST">
         <! –– username section ––>
             @csrf
             <label for="username_new">Nombre de usuario nuevo</label> <br>
