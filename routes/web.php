@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TurnoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsuarioController;
@@ -22,7 +23,13 @@ Route::get('/loginus', function () {return view('login_regular');})->name('login
 
 Route::post('usuario.verificar',[UsuarioController::class,'verify'])->name('usuarios.verificar');
 
+Route::get('/usuarios.home', function () {return view('home_user');})->name('usuarios.home');
 
+Route::get('/administrador.home', function () {return view('Home_Adm');})->name('administrador.home');
+
+Route::get('full-calender', [TurnoController::class, 'index']);
+
+Route::post('full-calender/action', [TurnoController::class, 'action']);
 
 
 Route::get('/usuarios.editar',[UsuarioController::class,'edit'])->name('usuarios.editar');
@@ -31,9 +38,9 @@ Route::put('/usuarios.actualizar',[UsuarioController::class,'update'])->name('us
 
 
 
-Route::get('/homea', function () {return view('Home_Adm');});
 
-Route::get('/homeus', function () {return view('home_user');});
+
+
 
 
 

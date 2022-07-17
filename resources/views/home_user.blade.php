@@ -22,19 +22,6 @@
         </nav>
     </header>
 
-<aside class="asidehome">
-    <div class="elementsidebar">
-         <h4>Eventos del día</h4>
-        <p>No hay eventos programados hasta ahora</p>
-    </div>
-    <div class="elementsidebar">
-        <h4>Leyenda</h4>
-        <p id="lg1">Asignado</p>
-        <p id="lg2">No Asignado</p>
-        <p id="lg3">Permiso por enfermedad</p>
-    </div>
-</aside>
-
 <div class="homebigbox">
 <section>
 
