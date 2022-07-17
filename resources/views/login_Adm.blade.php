@@ -19,19 +19,23 @@
 
         <p id="instructions">Ingresar sus datos de administrador:</p>
 
-        <label for="username">Nombre de usuario</label>
-        <input type="text" name="Enter usernames" placeholder="usuario">
+        <form action="{{route('admin.verificar') }}" method="POST">
+            @csrf
+
+        <label for="name">Nombre de usuario</label>
+        <input type="text" name="name" placeholder="usuario">
 
 
         <label for="password">Contraseña </label>
-        <input type="text" name="Enter password" placeholder="clave">
+        <input type="text" name="password" placeholder="clave">
 
-        <label for="password">Email </label>
-        <input type="text" name="Enter mail" placeholder="clave">
+        <label for="dni">DNI </label>
+        <input type="text" name="dni" placeholder="DNI">
 
         <input type="submit" name="log in">
-
-            <a id="volver_reg" href="Index.html">volver</a>
+       </form>
+        <a href="{{ route('registro')}}">Crear cuenta nueva</a>
+        <a id="volver_reg" href="{{route('welcome')}}">volver</a>
 
     </div>
     <div class="logginbanner">

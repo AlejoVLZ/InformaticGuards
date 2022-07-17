@@ -23,6 +23,8 @@ Route::get('/loginus', function () {return view('login_regular');})->name('login
 
 Route::post('usuario.verificar',[UsuarioController::class,'verify'])->name('usuarios.verificar');
 
+Route::post('admin.verificar',[UsuarioController::class,'verifyadm'])->name('admin.verificar');
+
 Route::get('/usuarios.home', function () {return view('home_user');})->name('usuarios.home');
 
 Route::get('/administrador.home', function () {return view('Home_Adm');})->name('administrador.home');

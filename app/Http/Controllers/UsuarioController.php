@@ -120,12 +120,23 @@ class UsuarioController extends Controller
         return redirect()->action([UsuarioController::class,'index']);
     }
     public function verify(Request $auth){
-        $auth = request()->only('name');
+        $auth = request()->only('name','password');
+
+        if (Auth::attempt($auth)){
+
+
+            redirect('home_user');
+        }
+        return 'comprueba nuevamente los campos';
+
+    }
+    public function verifyadm(Request $auth){
+        $auth = request()->only('name','password','dni');
 
         if (Auth::attempt($auth)){
 
             return 'exito';
-            /*redirect('home_user');*/
+            redirect('Home_Adm');
         }
         return 'comprueba nuevamente los campos';
 
