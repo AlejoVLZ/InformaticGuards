@@ -25,6 +25,14 @@ class UsuarioController extends Controller
         ];
         return view('users-info',$data);
     }
+    public function indexu()
+    {
+        $usuarios = $this->usuarios->obtenerUsuarios();
+        $data = [
+            'usuarios'=>$usuarios,
+        ];
+        return view('verusuarios',$data);
+    }
 
     /**
      * Show the form for creating a new resource.

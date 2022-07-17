@@ -9,7 +9,7 @@
 </head>
 	<body>
 
-@extends('layout.layoutadmin')
+@extends('layout.layout')
 
 @section('content')
 
@@ -17,26 +17,21 @@
 			<div >
 				<table id="dt_interno">
 					<thead>
-                        <td>ID</td>
+
 						<td>Nombre</td>
 						<td>Correo</td>
-						<td>Cedula</td>
 						<td>Telefono</td>
 						<td>Rol</td>
-						<td>Status</td>
 
                     </thead>
 					<tbody>
                         @foreach ( $usuarios as $usuario )
                         <tr>
-                            <td> {{ $usuario->id }}</td>
                             <td> {{ $usuario->name }}</td>
                             <td> {{ $usuario->email }}</td>
-                            <td> {{ $usuario->dni }}</td>
                             <td> {{ $usuario->phone }}</td>
                             <td> {{ $usuario->rol }}</td>
-                            <td> {{ $usuario->status }}</td>
-                            <td> <a href= "{{ route('usuarios.editar',$usuario->id) }}" >edit</a></td>
+
                         </tr>
                         @endforeach
                     </tbody>

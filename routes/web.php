@@ -31,11 +31,11 @@ Route::get('full-calender', [TurnoController::class, 'index']);
 
 Route::post('full-calender/action', [TurnoController::class, 'action']);
 
-
 Route::get('/usuarios.editar',[UsuarioController::class,'edit'])->name('usuarios.editar');
 
 Route::put('/usuarios.actualizar',[UsuarioController::class,'update'])->name('usuarios.actualizar');
 
+Route::get('/usuarios.ver',[UsuarioController::class,'indexu'])->name('usuarios.ver');
 
 
 
