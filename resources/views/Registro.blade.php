@@ -52,6 +52,7 @@
 
         <input type="submit" name="Guardar">
     </form>
+    <a id="volver_reg" href="{{route('welcome')}}">volver</a>
         </div>
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use Illuminate\Support\Facades\Auth;
 class UsuarioController extends Controller
 {
     protected $usuarios;
@@ -109,5 +110,16 @@ class UsuarioController extends Controller
         $usuario = Usuario::find($id);
         $usuario->delete();
         return redirect()->action([UsuarioController::class,'index']);
+    }
+    public function verify(Request $auth){
+        $auth = request()->only('name');
+
+        if (Auth::attempt($auth)){
+
+            return 'exito';
+            /*redirect('home_user');*/
+        }
+        return 'comprueba nuevamente los campos';
+
     }
 }

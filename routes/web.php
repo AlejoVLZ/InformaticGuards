@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,13 @@ Route::get('/', function () {return view('Welcome');})->name('welcome');
 
 Route::view('/sing', 'Registro') -> name('registro');
 
+Route::get('/loginus', function () {return view('login_regular');})->name('login.usuario');
+
+Route::post('usuario.verificar',[UsuarioController::class,'verify'])->name('usuarios.verificar');
+
+
+
+
 Route::get('/usuarios.editar',[UsuarioController::class,'edit'])->name('usuarios.editar');
 
 Route::put('/usuarios.actualizar',[UsuarioController::class,'update'])->name('usuarios.actualizar');
@@ -29,7 +37,7 @@ Route::get('/homeus', function () {return view('home_user');});
 
 
 
-Route::get('/loginus', function () {return view('login_regular');})->name('login.usuario');
+
 
 Route::get('/loginadm', function () {return view('login_Adm');})->name('login.admin');
 

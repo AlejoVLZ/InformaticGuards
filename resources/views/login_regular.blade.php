@@ -20,17 +20,19 @@
 
         <p id="instructions">Ingresar sus datos de usuario:</p>
 
-        <label for="username">Nombre de usuario</label>
-        <input type="text" name="Enter usernames" placeholder="usuario">
+        <form action="{{route('usuarios.verificar') }}" method="POST">
+            @csrf
 
-
-        <label for="password">Contraseña </label>
-        <input type="text" name="Enter password" placeholder="clave">
+        <label>
+            <input type="name" name="name" placeholder="usuario">
+        </label><br>
 
         <input type="submit" name="log in">
+        </form>
 
-            <a href="Registro.html">Crear cuenta nueva</a>
-            <a id="volver_reg" href="Index.html">volver</a>
+
+        <a href="{{ route('registro')}}">Crear cuenta nueva</a>
+        <a id="volver_reg" href="{{route('welcome')}}">volver</a>
 
     </div>
     <div class="logginbanner">
