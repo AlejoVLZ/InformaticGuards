@@ -1,5 +1,5 @@
  body {
- 	background: floralwhite;
+    background-color: rgb(226, 94, 246);
     font-family: sans-serif;
  }
  .footer{
@@ -11,8 +11,7 @@
 	background: #28D4FC;
 	padding:0px ;
 	font: bold;
-    border: solid 2px black;
-    border-radius: 10px;
+    padding: 1rem;
 }
 header h1{
     padding-left: 50px;
@@ -74,10 +73,13 @@ header h1{
     display: inline-block;
     text-align: center;
     width: 30%;
-    border: solid black 1px;
     font-weight: bold;
-    background-color: aqua;
+    background-color: rgb(15, 183, 85);
     border-radius: 2rem;
+    padding: 0.5rem;
+}
+.menu li a{
+    color: black;
 }
 .menu{
     text-align: center;
@@ -144,9 +146,11 @@ header h1{
     font-weight: bold;
 }
 /*seccion del inoformacion de susuario*/
-.calendar{
-    align-items: center;
-    width: 100%;
+#calendar{
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 3rem;
+
 }
 .calendaradmin{
     align-items: center;
